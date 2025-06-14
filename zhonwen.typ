@@ -22,7 +22,7 @@
   stack(dir: ltr, spacing: 0.5em, ..stacks)
 }
 
-#let hanzi-calligraphy-line(hanzi: str, items: (opaque: 7, blank: 3), size: 1.3, caption: none, stroke-qrcode: false) = {
+#let hanzi-calligraphy-line(hanzi: str, items: (opaque: 7, blank: 3), caption: none, stroke-qrcode: false, size: 1.3, font: "Yozai") = {
   let columns = items.opaque + items.blank + 1
   let font-size = 1.8em
 
@@ -41,9 +41,9 @@
       line((i + 0.5, 0), (i + 0.5, 1), stroke: stroke)
 
       let item = if i == 0 {
-        text(font-size * size, hanzi)
+        text(font: font, font-size * size, hanzi)
       } else if i < columns - items.blank {
-        text(gray, font-size * size, hanzi)
+        text(font: font, gray, font-size * size, hanzi)
       } else {
         []
       }
@@ -60,4 +60,18 @@
       content((columns+1, 0.5), stroke-order(hanzi: hanzi, size: size))
     }
   })
+}
+
+#let hanzi-calligraphy-phrase(phrase: str, items: (opaque: 7, blank: 3), captions: none, stroke-qrcode: false, size: 1.3, font: "Yozai") = {
+  captions = if captions == none {
+    ()
+  } else {
+    captions
+  }
+
+  phrase = phrase.codepoints()
+  for (hanzi, i) in phrase.zip(range(0, phrase.len())) {
+      let caption = captions.at(i, default: none)
+      hanzi-calligraphy-line(hanzi: hanzi, items: items, caption: caption, stroke-qrcode: stroke-qrcode, size: size, font: font)
+  }
 }

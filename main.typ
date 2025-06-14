@@ -1,4 +1,4 @@
-#import "zhonwen.typ": pinyin, hanzi-calligraphy-line
+#import "zhonwen.typ": pinyin, hanzi-calligraphy-line, hanzi-calligraphy-phrase
 
 #set page(paper: "a4", numbering: "1/1", number-align: right + bottom)
 #set text(lang: "pt", font: "Source Han Serif")
@@ -90,8 +90,76 @@ No contexto deste episódio, embora as expressões #text(lang: "ch")[我太好] 
 
 #pagebreak()
 
-== Prática CBC 1.01
+== Caligrafia CBC 1.01
 
-#hanzi-calligraphy-line(hanzi: "我", stroke-qrcode: true, caption: [Legenda aqui sla])
-#hanzi-calligraphy-line(hanzi: "我", stroke-qrcode: true, caption: [Legenda aqui sla])
-#hanzi-calligraphy-line(hanzi: "我", stroke-qrcode: true, caption: [Legenda aqui sla])
+#box[
+  #pinyin(terms: 2)[你][好][nǐ][hǎo]
+
+  #hanzi-calligraphy-phrase(phrase: "你好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 3)[你][好][吗?][nǐ][hǎo][ma]
+
+  #hanzi-calligraphy-phrase(phrase: "你好吗", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 3)[我][非常][好][wǒ][fēichàng][hǎo]
+
+  #hanzi-calligraphy-phrase(phrase: "我非常好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 3)[我][很][好][wǒ][hěn][hǎo]
+
+  #hanzi-calligraphy-phrase(phrase: "我很好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 2)[我][还好][wǒ][háihǎo]
+
+  #hanzi-calligraphy-phrase(phrase: "我还好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 2)[我][不太好][wǒ][bùtàihǎo]
+
+  #hanzi-calligraphy-phrase(phrase: "我不太好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 1)[谢谢][xièxie]
+
+  #hanzi-calligraphy-phrase(phrase: "谢谢", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 1)[再见][zàijiàn]
+
+  #hanzi-calligraphy-phrase(phrase: "再见", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 1)[汉字][hànzì] 
+
+  #hanzi-calligraphy-phrase(phrase: "汉字", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 2)[开始][吧][kāishǐ][ba]
+
+  #hanzi-calligraphy-phrase(phrase: "开始吧", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 1)[对][duì]
+
+  #hanzi-calligraphy-phrase(phrase: "对", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 1)[普通话][pǔtònghuà]
+
+  #hanzi-calligraphy-phrase(phrase: "普通话", stroke-qrcode: true)
+]
