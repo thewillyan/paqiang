@@ -2,10 +2,13 @@
 #import "@preview/tiaoma:0.3.0": qrcode
 
 #let stroke-order(hanzi: str, size: float) = {
-  qrcode(
-    "https://www.strokeorder.com/chinese/" + hanzi,
-    options: (scale: 0.65 * size)
-  )
+  let url = "https://www.strokeorder.com/chinese/" + hanzi
+  link(url)[
+    #qrcode(
+      url,
+      options: (scale: 0.6 * size)
+    )
+  ]
 }
 
 #let pinyin(terms: int, ..items) = {
