@@ -1,4 +1,8 @@
-#import "../zhongwen.typ": pinyin, hanzi-calligraphy-line, hanzi-calligraphy-phrase
+// SPDX-License-Identifier: CC-BY-SA-4.0
+// Copyright © 2025 André Willyan S. Vital - Licensed under Creative Commons BY-SA 4.0
+// Full text: [https://creativecommons.org/licenses/by-sa/4.0/] or ../LICENSE
+
+#import "zhongwen.typ": pinyin, hanzi-calligraphy-line, hanzi-calligraphy-phrase
 
 #set page(paper: "a4", numbering: "1/1", number-align: right + bottom)
 #set text(lang: "pt", font: "Source Han Serif")
@@ -23,6 +27,14 @@
 #v(2em)
 
 #outline()
+
+#place(center + bottom, float: true, clearance: 6pt)[
+  #set text(0.9em)
+  #sym.copyright #datetime.today().year() #sym.dot
+  #link("https://github.com/thewillyan")[André Willyan S. Vital] #sym.dot
+  Licensed under #link("https://creativecommons.org/licenses/by-sa/4.0/")[CC BY-SA 4.0] #sym.dot
+  Share-alike applies
+]
 #pagebreak()
 
 = Perguntando "Como você está?"

@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: CC-BY-SA-4.0
+// Copyright © 2025 André Willyan S. Vital - Licensed under Creative Commons BY-SA 4.0
+// Full text: [https://creativecommons.org/licenses/by-sa/4.0/] or ./LICENSE
+
 #import "@preview/cetz:0.4.0"
 #import "@preview/tiaoma:0.3.0": qrcode
 
