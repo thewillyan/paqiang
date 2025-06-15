@@ -1,4 +1,4 @@
-#import "zhonwen.typ": pinyin, hanzi-calligraphy-line, hanzi-calligraphy-phrase
+#import "../zhongwen.typ": pinyin, hanzi-calligraphy-line, hanzi-calligraphy-phrase
 
 #set page(paper: "a4", numbering: "1/1", number-align: right + bottom)
 #set text(lang: "pt", font: "Source Han Serif")
