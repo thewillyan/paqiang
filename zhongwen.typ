@@ -50,7 +50,7 @@
       let item = if i == 0 {
         text(font: font, font-size * size, hanzi)
       } else if i < columns - items.blank {
-        text(font: font, gray, font-size * size, hanzi)
+        text(font: font, gray.lighten(40%), font-size * size, hanzi)
       } else {
         []
       }
