@@ -22,7 +22,7 @@
     let lower = items.at(i, default: []) 
     let upper = items.at(i + terms, default: [])
 
-    let s = stack(dir: ttb, spacing: 0.5em)[#text(red.lighten(10%),upper)][#lower]
+    let s = stack(dir: ttb, spacing: 0.5em)[#text(red.lighten(10%), 0.9em, upper)][#lower]
     stacks.push(s)
   }
   set text(lang: "ch")
