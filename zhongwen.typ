@@ -82,3 +82,14 @@
       hanzi-calligraphy-line(hanzi: hanzi, items: items, caption: caption, stroke-qrcode: stroke-qrcode, size: size, font: font)
   }
 }
+
+#let terms-table(..content) = {
+  table(
+    columns: 3,
+    align: left + horizon,
+    inset: 0.8em,
+    fill: (x, y) => if y == 0 {silver.lighten(80%)} else {none},
+    table.header(pinyin(terms: 1)[汉字][hànzì], [Tradução], [Tradução Literal]),
+    ..content
+  )
+}
