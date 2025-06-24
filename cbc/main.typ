@@ -2,7 +2,7 @@
 // Copyright © 2025 André Willyan S. Vital - Licensed under Creative Commons BY-SA 4.0
 // Full text: [https://creativecommons.org/licenses/by-sa/4.0/] or ../LICENSE
 
-#import "zhongwen.typ": pinyin, hanzi-calligraphy-line, hanzi-calligraphy-phrase
+#import "zhongwen.typ": pinyin, hanzi-calligraphy-line, hanzi-calligraphy-phrase, terms-table
 
 #set page(paper: "a4", numbering: "1/1", number-align: right + bottom)
 #set text(lang: "pt", font: "Source Han Serif")
@@ -62,13 +62,7 @@ Então, finalmente, podemos finalizar a iteração com
 
 == Tabela de Termos
 
-
-#let conteudo_ep1 = table(
-  columns: 3,
-  align: left + horizon,
-  inset: 0.8em,
-  fill: (x, y) => if y == 0 {silver.lighten(80%)} else {none},
-  table.header(pinyin(terms: 1)[汉字][hànzì], [Tradução], [Tradução Literal]),
+#let conteudo_ep1 = terms-table(
   pinyin(terms: 2)[你][好][nǐ][hǎo], [Olá!], [你: você; 好: bem],
   pinyin(terms: 3)[你][好][吗?][nǐ][hǎo][ma], [Como você está?], [吗: [partícula usada para perguntas de sim-e-não]],
   pinyin(terms: 3)[我][非常][好][wǒ][fēichàng][hǎo], [Eu estou muito bem], [非: não; 常: comum; 非常: extraordinário],
@@ -79,20 +73,15 @@ Então, finalmente, podemos finalizar a iteração com
   pinyin(terms: 1)[再见][zàijiàn], [Até mais], [再: de novo; 见: ver],
 )
 
-#let extras_ep1 = table(
-  columns: 3,
-  align: left + horizon,
-  inset: 0.8em,
-  fill: (x, y) => if y == 0 {silver.lighten(80%)} else {none},
-  table.header(pinyin(terms: 1)[汉字][hànzì], [Tradução], [Tradução Literal]),
-  pinyin(terms: 2)[开始][吧][kāishǐ][ba], [Vamos começar], [开: iniciar; 始: começo; 开始: começar; 吧: partícula indicando sugestão],
+#let extras_ep1 = terms-table(
+  pinyin(terms: 2)[开始][吧][kāishǐ][ba], [Vamos começar], [开: iniciar; 始: começo; 开始: começar; 吧: [partícula indicando sugestão]],
   pinyin(terms: 1)[对][duì], [Correto], [-],
   pinyin(terms: 1)[普通话][pǔtònghuà], [Mandarim], [普: universal; 通: comum; 话: dialeto]
 )
 
-#figure(caption: [Cumprimentos básicos.], conteudo_ep1)
+#figure(caption: [CBC 1.01 -- Cumprimentos básicos.], conteudo_ep1)
 
-#figure(caption: [Termos extra do EP1.], extras_ep1)
+#figure(caption: [CBC 1.01 -- Termos extra.], extras_ep1)
 
 == #text(lang: "ch")[很和太] <hen_he_tai>
 
@@ -175,3 +164,47 @@ No contexto deste episódio, embora as expressões #text(lang: "ch")[我太好] 
 
   #hanzi-calligraphy-phrase(phrase: "普通话", stroke-qrcode: true)
 ]
+
+#pagebreak()
+
+= Saudações e Apresentações
+
+Nomes chineses tradicionalmente seguem o seguinte formato e ordem:
+
++ Nome de família: compartilhado por todos seus familiares;
++ Nome de geração: compatilhado entre irmãos;
++ Nome próprio: seu nome único.
+
+Entretanto, por conta da política do filho único, algumas pessoas acabam não usando o nome de
+geração dado que ela não possuí irmãos.
+
+Como os nome chineses são difíceis prara ocidentais pronunciarem é comum que chineses adotem, também,
+um nome "ocidental".
+De mesmo modo, ocidentais também devem adotar nomes chineses.
+
+== Tabela de Termos
+
+#let termos-extra-ep2 = terms-table(
+  pinyin(terms: 2, [你], [呢？], [nǐ], [ne]), [E você?], [呢: [partícula que indica que uma pergunta feita anteriormente se aplica a palavra anterior]],
+  pinyin(terms: 2, [准备好了], [马？], [zhǔnbèihǎole], [ma]), [Você está pronto?], [准: aprovar/permitir; 备: preparo, pronto,perfeito; 了: [partícula de ação terminada]; 准备好了: estar pronto],
+  pinyin(terms: 1, [也], [yě]), [Também], [-]
+)
+
+#figure(caption: [CBC 1.02 -- Termos extra.], termos-extra-ep2)
+
+#let cumprimentos-horas-do-dia = terms-table(
+  pinyin(terms: 1, [早上好], [zǎoshanghǎo]), [Bom dia], [早: cedo, manhã; 上: cima,topo/superior],
+  pinyin(terms: 1, [下午好], [xiàwǔhǎo]), [Boa tarde], [下: baixo,abaixo/inferior; 午: meio-dia/tarde],
+  pinyin(terms: 1, [晚上好], [wǎnshànghǎo]), [Boa noite (cumprimento)], [晚: noite],
+  pinyin(terms: 1, [晚安], [wǎn'ān]), [Boa noite], [安: tranquilo, quieto, pacífico],
+  pinyin(terms: 4, [你], [叫], [什么], [名字？], [nǐ], [jiào], [shénme], [míngzi]), [Como você se chama?], [叫: chamar/ser chamado; 什么: o que?/alguma coisa; 名字: nome (de pessoas ou coisas)],
+  pinyin(terms: 3, [我], [叫], [[nome completo]], [wǒ], [jiào]), [Eu me chamo [nome completo]], [-]
+)
+
+#figure(caption: [CBC 1.02 -- Cumprimentando em diferentes momentos do dia.], cumprimentos-horas-do-dia)
+
+== Observações
+// TODO: Mudar isso para subseções próprias como no capítulo 1.
+Adicionar informação que em 你叫什么名字？ o 名字 é opicional mas muito usado por falantes nativos.
+
+== Caligrafia CBC 1.02
