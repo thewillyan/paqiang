@@ -167,7 +167,22 @@ No contexto deste episódio, embora as expressões #text(lang: "ch")[我太好] 
 
 #pagebreak()
 
-= Saudações e Apresentações
+= Saudações e Nomes
+
+你好！O foco deste segundo epsódio é entender duas coisas saudações em diferentes momentos do
+dia (como o "boa tarde") e realizar perguntas e respostas envolvendo nomes próprios.
+
+== Saudações
+
+Dependendo do momento do dia (dia, tarde e noite) podemos realizar cumprimentos específicos.
+São eles:
+
+- Bom dia #sym.arrow 早上好
+- Boa tarde #sym.arrow 下午好
+- Boa noite:
+  - Cumprimento (utilizado na parte "ativa" da noite) #sym.arrow 晚上好
+  - O ultimo boa noite/Bom sono #sym.arrow 晚安
+== Nomes
 
 Nomes chineses tradicionalmente seguem o seguinte formato e ordem:
 
@@ -176,10 +191,9 @@ Nomes chineses tradicionalmente seguem o seguinte formato e ordem:
 + Nome próprio: seu nome único.
 
 Entretanto, por conta da política do filho único, algumas pessoas acabam não usando o nome de
-geração dado que ela não possuí irmãos.
+geração dado que elas não possuem irmãos como costumavam.
 
-Como os nome chineses são difíceis prara ocidentais pronunciarem é comum que chineses adotem, também,
-um nome "ocidental".
+Como os nome chineses são difíceis para ocidentais pronunciarem é comum que chineses adotem um nome "ocidental".
 De mesmo modo, ocidentais também devem adotar nomes chineses.
 
 == Tabela de Termos
@@ -197,14 +211,86 @@ De mesmo modo, ocidentais também devem adotar nomes chineses.
   pinyin(terms: 1, [下午好], [xiàwǔhǎo]), [Boa tarde], [下: baixo,abaixo/inferior; 午: meio-dia/tarde],
   pinyin(terms: 1, [晚上好], [wǎnshànghǎo]), [Boa noite (cumprimento)], [晚: noite],
   pinyin(terms: 1, [晚安], [wǎn'ān]), [Boa noite], [安: tranquilo, quieto, pacífico],
-  pinyin(terms: 4, [你], [叫], [什么], [名字？], [nǐ], [jiào], [shénme], [míngzi]), [Como você se chama?], [叫: chamar/ser chamado; 什么: o que?/alguma coisa; 名字: nome (de pessoas ou coisas)],
-  pinyin(terms: 3, [我], [叫], [[nome completo]], [wǒ], [jiào]), [Eu me chamo [nome completo]], [-]
 )
 
 #figure(caption: [CBC 1.02 -- Cumprimentando em diferentes momentos do dia.], cumprimentos-horas-do-dia)
 
-== Observações
-// TODO: Mudar isso para subseções próprias como no capítulo 1.
-Adicionar informação que em 你叫什么名字？ o 名字 é opicional mas muito usado por falantes nativos.
+#let perguntando-apresentando-nomes = terms-table(
+  pinyin(terms: 1, [请问], [qǐngwèn]), [Com licença, posso perguntar...], [请: perguntar/requisitar, convidar, por favor; 问: perguntar sobre],
+  pinyin(terms: 4, [你], [叫], [什么], [名字？], [nǐ], [jiào], [shénme], [míngzi]), [Como você se chama?], [叫: chamar/ser chamado; 什么: o que?/alguma coisa; 名字: nome (de pessoas ou coisas)],
+  pinyin(terms: 3, [我], [叫], [[nome completo]], [wǒ], [jiào]), [Eu me chamo [nome completo]], [-],
+  pinyin(terms: 3, [我], [姓], [[nome de família]], [wǒ], [xìng]), [Meu nome de família é [nome de família]], [姓: nome de família de alguém/clã],
+  pinyin(terms: 4, [很], [高兴], [认识], [你], [hěn], [gāoxìng], [rènshi], [nǐ]), [Prazer em te conhecer], [高兴: feliz; 认识: conhecer, conhecimento]
+)
+
+#figure(caption: [CBC 1.02 -- Perguntando e apresentando nomes.], perguntando-apresentando-nomes)
+
+== Utilização do termo 名字
+
+Em 你叫什么名字？, "名字" é opicional dado que a frase sem o mesmo já é gramaticalmente correta.
+Entretanto,  a frase contento "名字" é bem mais utilizada por falantes nativos.
+
+#pagebreak()
 
 == Caligrafia CBC 1.02
+
+#box[
+  #pinyin(terms: 5, [我],[很], [好，], [你], [呢？], [wǒ], [hěn], [hǎo], [nǐ], [ne])
+
+  #hanzi-calligraphy-phrase(phrase: "我很好，你呢？", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 4, [我], [也], [很], [好], [wǒ], [yě], [hěn], [hǎo])
+
+  #hanzi-calligraphy-phrase(phrase: "我也很好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 2, [准备好了], [马？], [zhǔnbèihǎole], [ma])
+
+  #hanzi-calligraphy-phrase(phrase: "准备好了马？", stroke-qrcode: true)
+]
+
+
+#box[
+  #pinyin(terms: 1, [早上好], [zǎoshanghǎo])
+
+  #hanzi-calligraphy-phrase(phrase: "早上好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 1, [下午好], [xiàwǔhǎo]) 
+
+  #hanzi-calligraphy-phrase(phrase: "下午好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 1, [晚上好], [wǎnshànghǎo])
+
+  #hanzi-calligraphy-phrase(phrase: "晚上好", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 1, [晚安], [wǎn'ān]) 
+
+  #hanzi-calligraphy-phrase(phrase: "晚安", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 5, [请问，], [你], [叫], [什么], [名字？], [qǐngwèn], [nǐ], [jiào], [shénme], [míngzi]) 
+
+  #hanzi-calligraphy-phrase(phrase: "请问，你叫什么名字？", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 6, [我], [姓], [习，], [叫], [习], [近平], [wǒ], [xìng], [Xí], [jiào], [Xí], [Jìnpíng])
+
+  #hanzi-calligraphy-phrase(phrase: "我姓习，叫习近平", stroke-qrcode: true)
+]
+
+#box[
+  #pinyin(terms: 4, [很], [高兴], [认识], [你], [hěn], [gāoxìng], [rènshi], [nǐ])
+
+  #hanzi-calligraphy-phrase(phrase: "很高兴认识你", stroke-qrcode: true)
+]
