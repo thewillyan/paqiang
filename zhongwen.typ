@@ -69,7 +69,7 @@
   })
 }
 
-#let hanzi-calligraphy-phrase(phrase: str, items: (opaque: 7, blank: 3), captions: none, stroke-qrcode: false, size: 1.3, font: "Yozai") = {
+#let hanzi-calligraphy-phrase(phrase: str, items: (opaque: 7, blank: 3), captions: none, ignore: ("，", "！", "？", "。"), stroke-qrcode: false, size: 1.3, font: "Yozai") = {
   captions = if captions == none {
     ()
   } else {
@@ -78,6 +78,9 @@
 
   phrase = phrase.codepoints()
   for (hanzi, i) in phrase.zip(range(0, phrase.len())) {
+      if ignore.contains(hanzi) {
+        continue
+      }
       let caption = captions.at(i, default: none)
       hanzi-calligraphy-line(hanzi: hanzi, items: items, caption: caption, stroke-qrcode: stroke-qrcode, size: size, font: font)
   }
